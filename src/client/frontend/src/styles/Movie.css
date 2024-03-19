@@ -1,0 +1,16 @@
+.SM_main_container{
+    width: 90%;
+    display: flex;
+    justify-content: flex-start;
+    /* flex-direction: row; */
+    flex-wrap: wrap;
+    margin-bottom: 20px;
+}
+.SM_heading {
+    width: 50%;
+    font-size: 30px;
+    color:darkcyan
+  }
+.div{
+    margin: 10px;
+}

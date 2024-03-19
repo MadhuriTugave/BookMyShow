@@ -1,4 +1,4 @@
-.App {
+/* .App {
   text-align: center;
 }
 
@@ -35,4 +35,20 @@
   to {
     transform: rotate(360deg);
   }
+} */
+.hori{
+  border: 2px solid rgb(17, 109, 136)
 }
+.App{
+  display: flex;
+  /* flex-wrap: wrap; */
+  border: 5px solid black;
+  background-color:rgb(162, 197, 162)
+}
+.components{
+  
+}
+.hr{
+  border: 1px solid;
+}
+
