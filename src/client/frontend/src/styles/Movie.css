@@ -2,15 +2,16 @@
     width: 90%;
     display: flex;
     justify-content: flex-start;
-    /* flex-direction: row; */
+    flex-direction: row;
     flex-wrap: wrap;
-    margin-bottom: 20px;
+    margin-bottom: 10px;
 }
 .SM_heading {
     width: 50%;
     font-size: 30px;
     color:darkcyan
+    
   }
 .div{
-    margin: 10px;
+    /* margin: 10px; */
 }

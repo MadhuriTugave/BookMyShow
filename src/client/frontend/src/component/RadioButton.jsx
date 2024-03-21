@@ -3,7 +3,7 @@ import "../styles/RadioButton.css"
 const RadioButton = ({ text, changeSelection, data }) => {
         // Changing selected data from the user.
         const handleChecked = (value) => {
-        //   changeSelection(value);
+          changeSelection(value);
         }
   return (
     

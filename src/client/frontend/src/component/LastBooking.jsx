@@ -5,8 +5,7 @@ import{seats} from "../data"
 function LastBooking() {
   const [lastBooking, setLastBooking] = useState("")
   const [loader, setLoader] = useState(false)
-  // const context = useContext(BsContext);
-  // const {lastBookingDatas } = context; 
+   
   const getLastRecord = async () => {
     try {
       setLoader(true)
@@ -34,18 +33,18 @@ function LastBooking() {
  
   return (
     <div className="last_booking_details_container_main">
-      <h2 className="last_booking_details_header">Last Booking Details:</h2>
+      <h2 className="last_booking_details_header">Last Booking Details</h2>
       { loader 
           ? <Loader/>
           :lastBooking  
               ? <div>
+                 <p className="movie">
+                    Movie:<span className='h2'>{lastBooking?.movie}</span>
+                  </p> 
+                  <p className="slot">
+                    Slot: <span className='h2'>{lastBooking?.slot}</span>
+                  </p>
                   
-                  <p className="slot" style={{ textAlign: "left" }}>
-                    Slot: <span>{lastBooking?.slot}</span>
-                  </p>
-                  <p className="movie">
-                    Movie: <span>{lastBooking?.movie}</span>
-                  </p>
                   <div className="seats_container">
                     <p className="seats_header">Seats:</p>
                     <ul className="seats">
@@ -60,7 +59,8 @@ function LastBooking() {
                     </ul>
                   </div>
                 </div>
-              : <p className="no_previous_booking_msg">No Booking Found!</p>
+              :<div className='no'> <p className="no_previous_booking_msg">No Booking Found !!</p></div>
+
       }
   </div>
   )

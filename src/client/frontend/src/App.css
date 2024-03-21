@@ -36,14 +36,12 @@
     transform: rotate(360deg);
   }
 } */
-.hori{
-  border: 2px solid rgb(17, 109, 136)
-}
 .App{
-  display: flex;
+  /* display: flex; */
   /* flex-wrap: wrap; */
-  border: 5px solid black;
-  background-color:rgb(162, 197, 162)
+  /* border: 5px solid black; */
+ 
+
 }
 .components{
   

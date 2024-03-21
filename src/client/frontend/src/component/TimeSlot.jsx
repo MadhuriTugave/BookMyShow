@@ -2,11 +2,17 @@ import React from 'react'
 import {slots} from "../data"
 import RadioButton from './RadioButton';
 import "../styles/Timeslot.css"
-function TimeSlot() {
 
+import { useContext } from 'react';
+
+import BookingContect  from '../context/creatContext';
+function TimeSlot() {
+  const context = useContext(BookingContect);
+  const {time ,changeTime} = context;
+  
     const handleChangeTimeOnSubmit = (value) => {
-        // changeTime(value);
-    
+        changeTime(value);
+    console.log(value);
         //setting slot in localstorage
         window.localStorage.setItem("slot", value);
       };
@@ -21,7 +27,7 @@ function TimeSlot() {
               <RadioButton
                 text={el}
                 changeSelection={handleChangeTimeOnSubmit}
-                // data={time}
+                data={time}
                 key={index}
               />
             );

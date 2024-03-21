@@ -22,7 +22,7 @@ route.post("/", async (req, res) => {
          //  console.log(myData)
           const data = await myData.save();
    
-          return res.status(200).json({
+          return res.json({
               message:"Booking successful",
               status:200,
               data:data
@@ -38,7 +38,6 @@ route.post("/", async (req, res) => {
        console.log("error", error.message);
        return res.status(500).json({
            message:"something went wrong!",
-           status:500,
            data:{}
        })
 }
@@ -54,7 +53,6 @@ route.get("/",async(req,res)=>{
           // if no booking found this will be printed
           return res.status(200).json({
               message:"No previous Booking found!",
-              status:200,
               data:null
           })    
       }
@@ -62,7 +60,6 @@ route.get("/",async(req,res)=>{
       // have any booking then print this message
       return res.status(200).json({
           message:"last booking!",
-          status:200,
           data:lastData
       }) 
         

@@ -1,10 +1,19 @@
 import React from 'react'
+import "../styles/loader.css"
 
 function Loader() {
   return (
-    <div>
-       <h3>Loadding....</h3>
-    </div>
+    <div class='container1'>
+  <div class='loader'>
+    <div class='loader--dot'></div>
+    <div class='loader--dot'></div>
+    <div class='loader--dot'></div>
+    <div class='loader--dot'></div>
+    <div class='loader--dot'></div>
+    <div class='loader--dot'></div>
+    <div class='loader--text'></div>
+  </div>
+</div>
   )
 }
 
