@@ -4,7 +4,7 @@ import './App.css';
 import Home from './component/Home';
 
 import { Provider } from './context/creatContext';
-import { Toaster } from 'react-hot-toast';
+
 
 
 function App(props) {
@@ -22,7 +22,7 @@ function App(props) {
 
   // handling post request to save booking details on the backend
   const handlePostBooking = async () => {
-    // Sending api request to backend with user selected movie, slot and seats to book movie.
+    // Sending request to backend with user selected movie, slot and seats to book movie.
     try {
         
         const res = await fetch(
@@ -36,7 +36,7 @@ function App(props) {
           }
         );
         const data = await res.json();
-        console.log(data)
+       
         if (res.status === 200) {
           //reset the state on success
          changeNoOfSeats({

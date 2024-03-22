@@ -63,7 +63,7 @@ function Home() {
       checkNegativeSeatsValidity(noOfSeat) ||
       checkZeroSeatsValidity(noOfSeat)
     ) {
-      toast.error(' Invalid Seats!',{
+      toast.error(' Please Enter Valid Seats!',{
         style: {
           border: '1px solid black',
           fontSize:"20px"
@@ -72,10 +72,9 @@ function Home() {
     } else {
       //validation successfull
       handlePostBooking();
-      toast.success('Booking successfully', {
+      toast.success(`Booking successfull for ${movie}`, {
        
-       
-        });
+       });
     }
   };
 

@@ -2,13 +2,17 @@ import React, { useEffect, useState } from 'react'
 import "../styles/LastBooking.css";
 import Loader from './Loader';
 import{seats} from "../data"
+import { useContext } from 'react';
+import BookingContect from '../context/creatContext';
 function LastBooking() {
   const [lastBooking, setLastBooking] = useState("")
   const [loader, setLoader] = useState(false)
+  const context = useContext(BookingContect)
+  const { lastBookingDatas}= context;
    
   const getLastRecord = async () => {
     try {
-      setLoader(true)
+      setLoader(true) // Sending a request for getting LastBooking 
       const res = await fetch(
          `http://localhost:8080/api/booking`
          , {
@@ -26,8 +30,8 @@ function LastBooking() {
   }
 
   useEffect(() => {
-    getLastRecord() //calling last booking api 
-  }, []);
+    getLastRecord() //every time last booking data change it will update lastBooking
+  }, [lastBookingDatas]);
 
   // console.log(lastBooking.movie)
  
