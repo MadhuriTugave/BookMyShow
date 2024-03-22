@@ -1,6 +1,6 @@
 const mongodb = require("mongodb");
-
-const mongoURI = "mongodb://localhost:27017/" + "bookMovie";
+require ("dotenv").config();
+const mongoURI = process.env.MONGOURL + "bookMovie";
 
 let mongoose = require("mongoose");
 const connectToMongo = async () => {

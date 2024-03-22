@@ -1,7 +1,8 @@
 const express = require("express");
 const app = express();
+require ("dotenv").config();
 const bodyParser = require("body-parser");
-const port =8080;
+const port = process.env.PORT || 8000;
 const path = require('path')
 const BookingModel= require("./schema.js")
 app.use(bodyParser.urlencoded({ extended: false }));
