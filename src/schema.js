@@ -13,6 +13,6 @@ const bookMovieSchema = new Schema({
         D2: { type: Number, default:0 }
     }
 
-})
+}, { timestamps: true })
 
 module.exports = mongoose.model('bookmovieticket', bookMovieSchema);
