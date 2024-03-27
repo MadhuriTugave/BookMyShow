@@ -1,8 +1,9 @@
 const mongodb = require("mongodb");
 // require ("dotenv").config();
+let mongoose = require("mongoose");
 const mongoURI = process.env.MONGOURL + "bookMovie";
 
-let mongoose = require("mongoose");
+
 const connectToMongo = async () => {
   mongoose
     .connect(mongoURI, { useNewUrlParser: true, useUnifiedTopology: true })
