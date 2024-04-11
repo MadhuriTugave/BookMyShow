@@ -1,5 +1,5 @@
 const mongodb = require("mongodb");
-// require ("dotenv").config();
+require("dotenv").config();
 const mongoURI = process.env.MONGOURL + "bookMovie";
 
 let mongoose = require("mongoose");
