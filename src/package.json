@@ -18,5 +18,11 @@
     "mongodb": "^3.6.3",
     "mongoose": "^5.10.15",
     "node-serialize": "0.0.4"
+  },
+  "devDependencies": {
+    "chai": "^4.4.0",
+    "chai-http": "^4.4.0",
+    "mocha": "^10.3.0",
+    "mochawesome": "^7.1.3"
   }
 }
